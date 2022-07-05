@@ -1,0 +1,62 @@
+Source: rust-eyre
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>,
+ librust-indenter-0.3+default-dev <!nocheck>,
+ librust-once-cell-1+default-dev (>= 1.4.0-~~) <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Jelmer Vernooĳ <jelmer@debian.org>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/eyre]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/eyre
+Rules-Requires-Root: no
+
+# FIXME (packages."(name)".section) debcargo auto-generated summary for librust-eyre-dev is very long, consider overriding
+
+Package: librust-eyre-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-indenter-0.3+default-dev,
+ librust-once-cell-1+default-dev (>= 1.4.0-~~)
+Recommends:
+ librust-eyre+default-dev (= ${binary:Version})
+Provides:
+ librust-eyre+auto-install-dev (= ${binary:Version}),
+ librust-eyre+track-caller-dev (= ${binary:Version}),
+ librust-eyre-0-dev (= ${binary:Version}),
+ librust-eyre-0+auto-install-dev (= ${binary:Version}),
+ librust-eyre-0+track-caller-dev (= ${binary:Version}),
+ librust-eyre-0.6-dev (= ${binary:Version}),
+ librust-eyre-0.6+auto-install-dev (= ${binary:Version}),
+ librust-eyre-0.6+track-caller-dev (= ${binary:Version}),
+ librust-eyre-0.6.8-dev (= ${binary:Version}),
+ librust-eyre-0.6.8+auto-install-dev (= ${binary:Version}),
+ librust-eyre-0.6.8+track-caller-dev (= ${binary:Version})
+Description: Flexible concrete Error Reporting type built on std::error::Error with customizable Reports - Rust source code
+ This package contains the source for the Rust eyre crate, packaged by debcargo
+ for use with cargo and dh-cargo.
+
+# FIXME (packages."(name)".section) debcargo auto-generated summary for librust-eyre+default-dev is very long, consider overriding
+
+Package: librust-eyre+default-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-eyre-dev (= ${binary:Version}),
+ librust-eyre+auto-install-dev (= ${binary:Version}),
+ librust-eyre+track-caller-dev (= ${binary:Version})
+Provides:
+ librust-eyre-0+default-dev (= ${binary:Version}),
+ librust-eyre-0.6+default-dev (= ${binary:Version}),
+ librust-eyre-0.6.8+default-dev (= ${binary:Version})
+Description: Flexible concrete Error Reporting type built on std::error::Error with customizable Reports - feature "default"
+ This metapackage enables feature "default" for the Rust eyre crate, by pulling
+ in any additional dependencies needed by that feature.

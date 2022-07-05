@@ -1,0 +1,24 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test eyre 0.6.8 --all-targets --all-features
+Features: test-name=rust-eyre:@
+Depends: dh-cargo (>= 18), librust-anyhow-1+default-dev (>= 1.0.28-~~), librust-backtrace-0.3+default-dev, librust-futures-0.3-dev, librust-rustversion-1+default-dev, librust-syn-1+default-dev, librust-syn-1+full-dev, librust-thiserror-1+default-dev, librust-trybuild-1+default-dev (>= 1.0.19-~~), librust-trybuild-1+diff-dev (>= 1.0.19-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test eyre 0.6.8 --all-targets --no-default-features --features auto-install
+Features: test-name=librust-eyre-dev:auto-install
+Depends: dh-cargo (>= 18), librust-anyhow-1+default-dev (>= 1.0.28-~~), librust-backtrace-0.3+default-dev, librust-futures-0.3-dev, librust-rustversion-1+default-dev, librust-syn-1+default-dev, librust-syn-1+full-dev, librust-thiserror-1+default-dev, librust-trybuild-1+default-dev (>= 1.0.19-~~), librust-trybuild-1+diff-dev (>= 1.0.19-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test eyre 0.6.8 --all-targets --no-default-features --features track-caller
+Features: test-name=librust-eyre-dev:track-caller
+Depends: dh-cargo (>= 18), librust-anyhow-1+default-dev (>= 1.0.28-~~), librust-backtrace-0.3+default-dev, librust-futures-0.3-dev, librust-rustversion-1+default-dev, librust-syn-1+default-dev, librust-syn-1+full-dev, librust-thiserror-1+default-dev, librust-trybuild-1+default-dev (>= 1.0.19-~~), librust-trybuild-1+diff-dev (>= 1.0.19-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test eyre 0.6.8 --all-targets --no-default-features
+Features: test-name=librust-eyre-dev:
+Depends: dh-cargo (>= 18), librust-anyhow-1+default-dev (>= 1.0.28-~~), librust-backtrace-0.3+default-dev, librust-futures-0.3-dev, librust-rustversion-1+default-dev, librust-syn-1+default-dev, librust-syn-1+full-dev, librust-thiserror-1+default-dev, librust-trybuild-1+default-dev (>= 1.0.19-~~), librust-trybuild-1+diff-dev (>= 1.0.19-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test eyre 0.6.8 --all-targets 
+Features: test-name=librust-eyre+default-dev:default
+Depends: dh-cargo (>= 18), librust-anyhow-1+default-dev (>= 1.0.28-~~), librust-backtrace-0.3+default-dev, librust-futures-0.3-dev, librust-rustversion-1+default-dev, librust-syn-1+default-dev, librust-syn-1+full-dev, librust-thiserror-1+default-dev, librust-trybuild-1+default-dev (>= 1.0.19-~~), librust-trybuild-1+diff-dev (>= 1.0.19-~~), @
+Restrictions: allow-stderr, skip-not-installable
