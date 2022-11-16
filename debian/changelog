@@ -1,3 +1,9 @@
+rust-eyre (0.6.8-1pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 16 Nov 2022 23:30:39 +0000
+
 rust-eyre (0.6.8-1) unstable; urgency=medium
 
   * Package eyre 0.6.8 from crates.io using debcargo 2.5.0
